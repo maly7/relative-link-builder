@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.hateoas.config.EnableHypermediaSupport;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.github.maly7.sampleapp"})
 @EnableHypermediaSupport(type = {EnableHypermediaSupport.HypermediaType.HAL})
 public class TestApplication {
     public static void main(String[] args) {

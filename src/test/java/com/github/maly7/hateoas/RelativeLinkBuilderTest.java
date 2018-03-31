@@ -27,9 +27,8 @@ public class RelativeLinkBuilderTest {
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
         JSONObject book = new JSONObject(response.getBody());
+        String href = book.getJSONObject("_links").getJSONObject("self").getString("href");
 
-//        book.getJSONObject("_links");
-
-        Assert.assertEquals("The self rel should be relative", url, "fail");
+        Assert.assertEquals("The self rel should be relative", url, href);
     }
 }
