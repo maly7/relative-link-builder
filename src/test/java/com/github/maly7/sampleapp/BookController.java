@@ -8,7 +8,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
-@RequestMapping("book")
+@RequestMapping("/book")
 public class BookController {
 
     @RequestMapping(path = {"/{id"})
